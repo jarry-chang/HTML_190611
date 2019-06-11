@@ -23,11 +23,35 @@
 
 <head>
     <title> HTML - Form </title>
+    <meta charset="UTF-8">
 </head>
 
 <body>
-   
-    
+    <form>
+        <div>
+            <!-- for 適用於以下id標籤連結表格 -->
+            <label for="input_name">姓名:</label>
+            <!-- 如上for對應名稱 -->
+            <input type="text" id="input_name">
+        </div>
+        <div>
+            <label for="input_iphone">電話:</label>
+            <input type="text" id="input_iphone">
+        </div>
+        <div>
+            <label for="">性別:</label>
+            <input type="radio" id="input_nale" name="gender">
+            <label for="input_nale">男生</label>
+            <!-- 如果type是選擇radio請用name加入到同群組，不然每個點選都是為獨立個體: -->
+            <input type="radio" id="input_female" name="gender">
+            <label for="input_female">女生</label>
+        </div>
+        <div>
+            <label for="input_time">出生日期</label>
+            <input type="text" name="" id="">
+        </div>
+    </form>
+
 </body>
 
 </html>
@@ -42,5 +66,3 @@
 <!--1.9. 試試看，加入送出按鈕 (submit) -->
 <!--1.10. 試試看，加入居住地 <select> <option> -->
 <!--1.11. 試試看，按下按鈕網址列會有什麼改變? -->
-
-
