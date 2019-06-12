@@ -36,7 +36,7 @@
         </div>
         <div>
             <label for="input_iphone">電話:</label>
-            <input type="text" id="input_iphone">
+            <input type="tel" id="input_iphone">
         </div>
         <div>
             <label for="">性別:</label>
@@ -51,26 +51,56 @@
             <input type="text" placeholder="年 / 月 / 日" id="input_time" name="time">
         </div>
         <div>
+            <label for="city">居住地:</label>
+            <!-- 下拉選單請用select包起來 -->
+            <select name="cityList" id="city">
+                <!-- optgroup label為群組的頭 -->
+                <optgroup label="Taipei">Taipei</optgroup>
+                <!-- option value 為群組組員 -->
+                <option value="Zhongshan">中山</option>
+                <option value="Tamsui">淡水</option>
+                <option value="Nangang">南港</option>
+                <optgroup label="Taichung">Taichung</optgroup>
+                <option value="Central">中區</option>
+                <option value="Nantun">南屯區</option>
+            </select>
+        </div>
+        <div>
             <label for="">使用過哪些軟體:</label>
-            <input type="checkbox" id="input_word">
+            <input type="checkbox" id="input_word" name="box">
             <label for="input_word">Word</label>
-            <input type="checkbox" id="input_excel">
+            <input type="checkbox" id="input_excel" name="box">
             <label for="input_excel">Excel</label>
-            <input type="checkbox" id="input_point">
+            <input type="checkbox" id="input_point" name="box">
             <label for="input_point">PowerPoint</label>
-            <input type="checkbox" id="input_Basic">
+            <input type="checkbox" id="input_Basic" name="box">
             <label for="input_Basic">Visual Basic Code</label>
-            <input type="checkbox" id="input_php">
+            <input type="checkbox" id="input_php" name="box">
             <label for="input_php">PHP</label>
-            <input type="checkbox" id="input_mysql">
+            <input type="checkbox" id="input_mysql" name="box">
             <label for="input_mysql">MySQL</label>
         </div>
         <div>
             <label for="input_email">Email</label>
-            <input type="text" id="input_email">
+            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="input_email">
         </div>
-    </form>
+        <div>
+            <label for="favcolor">最喜歡</label>
+            <input type="color" name="" id="favcolor">
+        </div>
+        <div>
+            <label for="height">身高(tag):</label>
+            <input type="range" id="height" min="140" max="200" step="1" oninput="outputUpdate(value)">
+            <output id="vesult">顯示</output>
+        </div>
+        <input type="submit" value="送出通訊錄">
 
+    </form>
+    <script>
+        function outputUpdate(vol) {
+            document.getElementById("vesult").value = vol;
+        }
+    </script>
 </body>
 
 </html>
